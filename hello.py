@@ -1,3 +1,4 @@
+# coding=utf-8
 import uuid
 
 from datetime import datetime
@@ -10,11 +11,10 @@ from logging.handlers import RotatingFileHandler
 
 app = Flask(__name__)
 
-if __name__ == '__main__':
-    handler = RotatingFileHandler('foo.log', maxBytes=10000, backupCount=1)
-    handler.setLevel(logging.DEBUG)
-    app.logger.addHandler(handler)
-    app.run()
+
+@app.route('/')
+def index():
+    return "Привет, вы попали на главную страницу!"
 
 
 @app.route('/auth')
@@ -69,3 +69,10 @@ def kuzya():
 def parse_date_from_db(db_date):
     if db_date == None: return
     return datetime.strftime(db_date, '%Y-%m-%dT%H:%M:%S')
+
+
+if __name__ == '__main__':
+    handler = RotatingFileHandler('foo.log', maxBytes=10000, backupCount=1)
+    handler.setLevel(logging.DEBUG)
+    app.logger.addHandler(handler)
+    app.run(port=8999)

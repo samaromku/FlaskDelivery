@@ -1,0 +1,44 @@
+Headers: Host: 127.0.0.1:8999
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+args: ImmutableMultiDict([])
+Headers: Host: 127.0.0.1:8999
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/kuzya' [GET]>>
+args: ImmutableMultiDict([])
+Headers: Host: 127.0.0.1:8999
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/get_current' [GET]>>
+args: ImmutableMultiDict([])
+Headers: Host: 127.0.0.1:8999
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+
+Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+args: ImmutableMultiDict([])
