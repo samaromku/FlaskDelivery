@@ -1,44 +1,185 @@
-Headers: Host: 127.0.0.1:8999
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
 
-
-Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/add_order' [GET]>>
 args: ImmutableMultiDict([])
-Headers: Host: 127.0.0.1:8999
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
+Exception on /add_order [GET]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Andrey/PycharmProjects/FlaskDelivery/hello.py", line 41, in add_order
+    (title, description, address, created, deadline))
+  File "C:\Python27\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python27\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python27\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+ProgrammingError: 1054 (42S22): Unknown column 'NULL' in 'field list'
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
 
-
-Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/kuzya' [GET]>>
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/add_order' [GET]>>
 args: ImmutableMultiDict([])
-Headers: Host: 127.0.0.1:8999
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
+Exception on /add_order [GET]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Andrey/PycharmProjects/FlaskDelivery/hello.py", line 41, in add_order
+    (title, description, address, created, deadline))
+  File "C:\Python27\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python27\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python27\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+ProgrammingError: 1054 (42S22): Unknown column 'NULL' in 'field list'
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
 
-
-Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/get_current' [GET]>>
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/add_order' [GET]>>
 args: ImmutableMultiDict([])
-Headers: Host: 127.0.0.1:8999
-User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate
-Connection: keep-alive
-Upgrade-Insecure-Requests: 1
+Exception on /add_order [GET]
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:/Users/Andrey/PycharmProjects/FlaskDelivery/hello.py", line 41, in add_order
+    (title, description, address, created, deadline))
+  File "C:\Python27\lib\site-packages\mysql\connector\cursor.py", line 561, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "C:\Python27\lib\site-packages\mysql\connector\connection.py", line 514, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "C:\Python27\lib\site-packages\mysql\connector\connection.py", line 416, in _handle_result
+    raise errors.get_exception(packet)
+ProgrammingError: 1054 (42S22): Unknown column 'NULL' in 'field list'
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
 
-
-Body: <bound method BaseRequest.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
 args: ImmutableMultiDict([])
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
+
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+args: ImmutableMultiDict([])
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
+
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+args: ImmutableMultiDict([])
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
+
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+args: ImmutableMultiDict([])
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
+
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/' [GET]>>
+args: ImmutableMultiDict([])
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
+
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/add_order' [GET]>>
+args: ImmutableMultiDict([])
+Headers: User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+Connection: keep-alive
+Host: 127.0.0.1:8999
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept-Encoding: gzip, deflate, br
+
+
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/add_order' [GET]>>
+args: ImmutableMultiDict([])
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/add_order' [GET]>>
+args: ImmutableMultiDict([])
+Body: <bound method Request.get_data of <Request 'http://127.0.0.1:8999/add_order' [GET]>>
+args: ImmutableMultiDict([])
+args: ImmutableMultiDict([('title', u'test'), ('description', u'asdfdhasfdasf'), ('address', u'asdfljdasklf')])
