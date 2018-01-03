@@ -13,15 +13,15 @@ import mysql.connector
 
 app = Flask(__name__)
 conn = mysql.connector.connect(user='root', password='root', host='localhost', database='delivery')
-cursor = conn.cursor(buffered=True)
+cursor = conn.cursor(buffered=False)
 
 
 @app.route('/')
 def index():
-    cursor.execute("INSERT INTO `delivery`.`user` (`name`, `email`) VALUES ('sam', 'hui@mail.ru')")
-    conn.commit()
-    cursor.execute('SELECT * FROM delivery.user')
-    print cursor.fetchall()
+    # cursor.execute("INSERT INTO `delivery`.`worker` (`name`, `email`) VALUES ('sam', 'hui@mail.ru')")
+    # conn.commit()
+    # cursor.execute('SELECT * FROM delivery.worker')
+    # print cursor.fetchall()
     return "Привет, вы попали на главную страницу in ass!asd"
 
 
@@ -30,30 +30,14 @@ def add_order():
     if (request.json):
         content = request.json
         print (content)
-        title = content.get('title')
-        description = content.get('description')
-        address = content.get('address')
-
-        # print (title, "title")
-        # print (description, "description")
-        # print (str(request.is_json))
-        # created = datetime.now()
-        # deadline = datetime.now()
-        created = datetime.now()
-        deadline = datetime.now()
-
-        # from Order import Order
-        # order = Order(title, description, created, deadline, address)
-        # from database import add_order_in_db
-        # add_order_in_db(order)
 
         cursor.execute("INSERT INTO delivery.order (title, description, address, created, deadline) "
                        "VALUES ('%s', '%s', '%s', '%s', '%s');" % (
-                           title,
-                           description,
-                           address,
-                           created,
-                           deadline
+                           content.get('title'),
+                           content.get('description'),
+                           content.get('address'),
+                           datetime.now(),
+                           datetime.now()
                        ))
 
         conn.commit()
@@ -61,6 +45,14 @@ def add_order():
         print (last_id)
         cursor.execute('SELECT * FROM delivery.order')
         return str(last_id)
+
+
+@app.route('/get_addresses')
+def get_addresses():
+    cursor.execute('select * from delivery.address')
+    result = cursor.fetchall()
+    # cursor.close()
+    return jsonify(result)
 
 
 @app.route('/auth')
